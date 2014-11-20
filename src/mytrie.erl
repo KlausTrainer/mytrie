@@ -3,7 +3,7 @@
 -export([new/0, store/3, find/2, find_longest_prefix/2]).
 
 -type entry() :: {trie(), binary() | []} | binary().
--type trie() :: list({char(), entry()}) | dict:dict(char(), entry()).
+-opaque trie() :: list({char(), entry()}) | dict:dict(char(), entry()).
 -export_type([trie/0]).
 
 -define(MAX_LIST_SIZE, 8).
